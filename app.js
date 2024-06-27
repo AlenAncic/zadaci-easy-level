@@ -295,21 +295,112 @@ console.log(sadrziElement([4,8,9,7], 5))
 
 // 20. Napiši funkciju koja dodaje element na kraj niza.
 
-function dodajeElement(niz,element) {
+/* function dodajeElement(niz,element) {
     niz.push(element);
     return niz;
 }
 
-console.log(dodajeElement([4,8,9,7],5))
+console.log(dodajeElement([4,8,9,7],5)) */
 
 
 // 21. Napiši funkciju koja dodaje element na početak niza.
+
+/* function dodajeElement(niz,element) {
+    niz.unshift(element);
+    return niz;
+}
+
+console.log(dodajeElement([4,8,9,7],5))
+ */
 // 22. Napiši funkciju koja uklanja poslednji element iz niza.
+
+/* function uklanjaPoslednjiElement(niz) {
+    niz.pop();
+    return niz;
+}
+
+console.log(uklanjaPoslednjiElement([4,8,9,7]))
+ */
 // 23. Napiši funkciju koja uklanja prvi element iz niza.
+
+/* function uklanjaPrviElement(niz) {
+    niz.shift();
+    return niz;
+}
+
+console.log(uklanjaPrviElement([4,8,9,7]))
+
 // 24. Napiši funkciju koja spaja dva niza.
+
+function spojiNizove(niz1,niz2) {
+    return niz1.concat(niz2);
+    
+}
+
+console.log(spojiNizove([4,8,9,7],[3,5,4]))
+
+
 // 25. Napiši funkciju koja sortira niz u rastućem redosledu.
+
+function sortirajteNiz(niz) {
+    return niz.sort((a,b)=>a-b);
+    
+}
+
+console.log(sortirajteNiz([4,8,9,7,3,5]))
+
 // 26. Napiši funkciju koja sortira niz u opadajućem redosledu.
+
+function sortirajteOpadajuciNiz(niz) {
+    return niz.sort((a,b)=>b-a);
+    
+}
+
+console.log(sortirajteOpadajuciNiz([4,8,9,7,3,5])) 
+
 // 27. Napiši funkciju koja preokreće niz.
+
+function preokreniNiz(niz) {
+    //preokrece niz tako sto prvi postaje poslednji, drugi postaje pretposlednji, itd...//
+    return niz.reverse();
+    
+}
+
+console.log(preokreniNiz([4,8,9,7,3,5]))  */
+
 // 28. Napiši funkciju koja vraća niz svih parnih brojeva iz datog niza.
+
+function izdvojiParneBrojeve(niz) {
+
+    return niz.filter(broj => broj%2 === 0)
+    
+}
+
+console.log(izdvojiParneBrojeve([4,8,9,7,3,5])) 
+console.log(izdvojiParneBrojeve([10, 15, 20, 25, 30]))
+
 // 29. Napiši funkciju koja vraća niz svih neparnih brojeva iz datog niza.
+
+function izdvojiNeparneBrojeve(niz) {
+
+    return niz.filter(broj => broj%2 === 1)
+    
+}
+
+console.log(izdvojiNeparneBrojeve([4,8,9,7,3,5])) 
+console.log(izdvojiNeparneBrojeve([10, 15, 20, 25, 30]))
+
 // 30. Napiši funkciju koja vraća broj pojavljivanja određenog elementa u nizu.
+
+
+function brojacElementaNiza(niz,element) {
+
+    return niz.reduce((brojac, trenutniElement) => {
+        return trenutniElement === element ? brojac + 1 : brojac;
+    }, 0)    
+}
+
+console.log(brojacElementaNiza([4,8,9,7,3,5,8,7,8], 8)) 
+console.log(brojacElementaNiza([true,false,true,true,],true))
+
+
